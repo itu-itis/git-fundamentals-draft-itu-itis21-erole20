@@ -24,11 +24,20 @@
 		<title>Emircan's Web Page</title>
 	</head>
 
-	<body>
+	<body onload="welcomeFunction(); document.body.style.backgroundColor='pink'"
+		onresize="document.body.style.backgroundColor='lightblue'" 
+		
+		onkeydown="document.body.style.backgroundColor='white'"
+		onkeyup="document.body.style.backgroundColor='lightyellow'">
+		<script>
+			function welcomFunction() {
+				alert("Welcome!");
+			}
+		</script>
 		<p>
 			<strong>Introduction to Information Systems</strong>
 		</p>
-		<p class="centered">
+		<p class="centered" onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'">
 			<em>
 			Emircan EROL
 			<br>
@@ -36,19 +45,22 @@
 			</em>
 		</p>
 		<p>
-			<ul>
+			<ul id="undorderedL" onmouseover="document.getElementById('undorderedL').style.backgroundColor='purple'">
 				<li>Homo habilis</li>
 				<li>Homo erectus</li>
 				<li>Homo neanderthalensis</li>
 				<li>Homo floresiensis</li>
 			
-				<ul>
+				<ul id="myList" onclick="document.getElementById('myList').style.backgroundColor='orange'">
 					<li>Homo sapiens</li>
 				</ul>
 			</ul>	
 		</p>
 		
-		<h1><strong>Human Evolution</strong></h1>
+		<h1 onmouseover = "style.color='orange'; style.backgroundColor = 'lightgreen'" 
+			onmouseout="style.color='red'; style.backgroundColor = 'white'">
+			<strong>Human Evolution</strong>
+		</h1>
 		<p><img src="evolution-diagram.png" alt="EvolutionDiagram"></p>
 		<p> 
 			You can find the link of the image below:
@@ -59,7 +71,7 @@
 		<p> 
 			This image is a link, try it:
 			<a href=" https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"> 
-				<img src="evolution-diagram.png">
+				<img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)" src="evolution-diagram.png">
 			</a>
 		</p>
 
